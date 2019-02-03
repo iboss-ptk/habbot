@@ -18,7 +18,7 @@ config :habbot, HabbotWeb.Endpoint,
   pubsub: [name: Habbot.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Line secrets
-config :my_crush_bot, Line,
+config :habbot, Line,
   channel_secret: System.get_env("LINE_CHANNEL_SECRET"),
   channel_access_token: System.get_env("LINE_CHANNEL_ACCESS_TOKEN")
 

@@ -1,6 +1,6 @@
 defmodule Line.Client do
   @reply_endpoint "https://api.line.me/v2/bot/message/reply"
-  @line_conf Application.get_env(:my_crush_bot, Line)
+  @line_conf Application.get_env(:habbot, Line)
 
   def reply(messages, replyToken) do
     HTTPoison.post(

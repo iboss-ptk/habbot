@@ -1,5 +1,5 @@
 defmodule Line.Signature do
-  @line_conf Application.get_env(:my_crush_bot, Line)
+  @line_conf Application.get_env(:habbot, Line)
 
   def verify(req_body, line_signature) do
     hashed_body =
