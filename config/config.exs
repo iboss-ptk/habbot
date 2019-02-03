@@ -17,6 +17,11 @@ config :habbot, HabbotWeb.Endpoint,
   render_errors: [view: HabbotWeb.ErrorView, accepts: ~w(json)],
   pubsub: [name: Habbot.PubSub, adapter: Phoenix.PubSub.PG2]
 
+# Configures Line secrets
+config :my_crush_bot, Line,
+  channel_secret: System.get_env("LINE_CHANNEL_SECRET"),
+  channel_access_token: System.get_env("LINE_CHANNEL_ACCESS_TOKEN")
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",

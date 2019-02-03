@@ -11,5 +11,7 @@ defmodule HabbotWeb.Router do
 
   scope "/api", HabbotWeb do
     pipe_through :api
+
+    post "/webhook", PageController, :webhook
   end
 end
