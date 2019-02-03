@@ -5,6 +5,10 @@ defmodule HabbotWeb.Router do
     plug :accepts, ["json"]
   end
 
+  scope "/", HabbotWeb do
+    get "/", PageController, :index
+  end
+
   scope "/api", HabbotWeb do
     pipe_through :api
   end
