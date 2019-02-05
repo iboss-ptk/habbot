@@ -9,4 +9,3 @@ defmodule BodyReader.CacheRaw do
     conn.private[:raw_body]
   end
 end
-

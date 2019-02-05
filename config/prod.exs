@@ -10,7 +10,8 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :habbot, HabbotWeb.Endpoint,
-  http: [port: {:system, "PORT"}], # Possibly not needed, but doesn't hurt
+  # Possibly not needed, but doesn't hurt
+  http: [port: {:system, "PORT"}],
   url: [host: "habbot.gigalixirapp.com", port: 80],
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
   server: true

@@ -16,7 +16,7 @@ defmodule HabbotWeb.BotController do
             Line.Client.QuickReply.quick_message("snack"),
             Line.Client.QuickReply.quick_message("coffee"),
             Line.Client.QuickReply.quick_message("soft drink"),
-            Line.Client.QuickReply.quick_message("beer"),
+            Line.Client.QuickReply.quick_message("beer")
           ])
         )
       ]
