@@ -22,4 +22,31 @@ defmodule Line.Client do
       "text" => text_string
     }
   end
+
+  def text(text_string, quick_reply) do
+    Map.merge(text(text_string), quick_reply)
+  end
+end
+
+defmodule Line.Client.QuickReply do
+  def quick_reply(items) do
+    %{
+      "quickReply" => %{
+        "items" => items
+      }
+    }
+  end
+
+  def quick_message(label, text) do
+    %{
+      "type" => "action",
+      "action" => %{
+        "type" => "message",
+        "label" => label,
+        "text" => text
+      }
+    }
+  end
+
+  def quick_message(text), do: quick_message(text, text)
 end

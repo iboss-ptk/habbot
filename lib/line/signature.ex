@@ -18,7 +18,7 @@ defmodule Line.Signature.Verification.Plug do
 
   def call(conn, _opts) do
     line_signature = conn |> get_req_header("x-line-signature") |> Enum.join()
-    body = conn.assigns[:raw_body] |> Enum.join()
+    body = conn |> BodyReader.CacheRaw.read_raw_body()
 
     case verify(body, line_signature) do
       :ok -> conn
